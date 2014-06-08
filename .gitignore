@@ -1,0 +1,2 @@
+$ cat .gitignore
+server/node_modules

@@ -1,0 +1,280 @@
+html, body, #landing, #dashboard {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.cursor {
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	border: 10px solid #FF009A;
+	background-color: rgba(255, 255, 255, 0.5);
+	border-radius: 100%;
+	-webkit-backface-visibility: hidden;
+	-webkit-transform:  translateZ(0);
+	z-index: 9999;
+}
+
+/*Landingspage*/
+
+#landing {
+	overflow: hidden;
+}
+
+#landing header {
+	height: 60%;
+	width: 100%;
+	position: relative;
+	background-color: rgba(255, 255, 255, 0.6);
+}
+
+#landing article {
+	background-color: #f8f8f8;
+	border-top: 5px #DFDFDF solid;
+	position: relative;
+	height: 50%;
+	width: 100%;
+}
+
+#landing #intro {
+	width: 400px;
+	margin: 0 auto;
+}
+
+#landing #app,
+#landing #intro {
+	float: left;	
+}
+
+#landing #info_box {
+	background-color: #FF009A;
+	padding: 15px;
+	margin-top: 30px;
+	border-radius: 5px;
+	color: #FFF;
+}
+
+#landing #info_box:before {
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 0;
+	border-top: 30px solid #FF009A;
+	border-right: 30px solid rgba(0, 0, 0, 0);
+	margin-top: 100px;
+	margin-left: -15px;
+}
+
+#landing #info_box p {
+	margin-top: 8px;
+	margin-bottom: 10px;
+	line-height: 23px;
+}
+
+#landing #desktop_view {
+	color: #3F3F3F;
+	font-size: 16px;
+	margin-top: 65px;
+}
+
+#landing #app {
+	background: url(../img/iphone.png);
+	width: 236px;
+	height: 495px;
+	margin-right: 25px;
+}
+
+#landing .container {
+	margin: 0 auto;
+	margin-top: -325px;
+	width: 665px;
+	height: 300px;
+}
+
+#landing #app_pane {
+	margin-left: 23px;
+	margin-top: 76px;
+	width: 194px;
+	height: 346px;
+	background-color: #F4F4F4;
+}
+
+#landing #app_header {
+	height: 25px;
+	color: #7E7E7E;
+	background: #F8F8F8;
+	border-bottom: 1px #DFDFDF solid;
+	font-size: 11px;
+	text-align: center;
+	padding-top: 10px;
+	font-weight: bold;
+}
+
+#landing #app_touchpad {
+	border: 5px #DFDFDF solid;
+	margin-left: 15px;
+	margin-right: 15px;
+	height: 190px;
+	border-radius: 10px;
+	background-color: #FFF;
+	margin-top: 15px;
+} 
+
+#landing #auth_code {
+	margin-left: 15px;
+	margin-right: 15px;
+	background-color: #3B3B3B;
+	text-align: center;
+	color: #FFF;
+	margin-top: 15px;
+	display: block;
+	padding: 10px;
+	border-radius: 5px;
+	padding-bottom: 15px;
+	font-size: 35px;
+}
+
+#landing #app_touch {
+	position: relative;
+	border: 6px solid #FF009A;
+	width: 35px;
+	height: 35px;
+	border-radius: 100%;
+}
+
+#landing #auth_code_small {
+	background-color: #3B3B3B;
+	border-radius: 5px;
+	color: #FFF;
+	padding: 5px;
+	padding-top: 0px;
+	padding-bottom: 2px;
+	font-size: 13px;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+/*Dashboard*/
+
+#dashboard {
+	background: url(../img/honeycomb.png);
+	display: none;
+}
+
+.project {
+	position: absolute;
+	height: 225px;
+	width: 200px;	
+}
+
+#projects .hexagon {
+	width: 170px;
+}
+
+.id-1 {
+	top: 56px;
+	left: 99px;
+}
+
+.id-2 {
+	left: 304px;
+	top: 56px;
+}
+
+.id-3 {
+	left: 508px;
+	top: 56px;
+}
+
+.id-4 {
+	left: 202px;
+	top: 233px;
+}
+
+.hexagon {
+    
+    height: 400px;
+    margin: -80px 0 0 20px;
+
+    overflow: hidden;
+    visibility: hidden;
+    -webkit-transform: rotate(120deg);
+       -moz-transform: rotate(120deg);
+         -o-transform: rotate(120deg);
+            transform: rotate(120deg);
+    cursor: pointer;
+}
+
+.hexagon-in {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    -webkit-transform: rotate(-60deg);
+       -moz-transform: rotate(-60deg);
+         -o-transform: rotate(-60deg);
+            transform: rotate(-60deg);
+}
+
+.hexagon-on {
+    width: 100%;
+    height: 100%;
+    visibility: visible;
+    -webkit-transform: rotate(-60deg);
+       -moz-transform: rotate(-60deg);
+         -o-transform: rotate(-60deg);
+            transform: rotate(-60deg);
+}
+
+.hexagon-on:hover {
+}
+
+/*project*/
+
+#project {
+	display: none;
+}
+
+.project-slide-container {
+	background-color: #FF009A;
+	z-index: 9999;
+	position: absolute;
+	top: 75%;
+	right: 12%;
+	border-radius: 50px;
+	color: #FFF;
+	padding: 15px;
+	font-size: 40px;
+	padding-right: 30px;
+	padding-left: 30px;
+	padding-bottom: 20px;
+}
+
+.project-main {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 99;
+	overflow: hidden;
+
+ 	-webkit-animation:fadeIn ease-in 0.5s; 
+    -moz-animation:fadeIn ease-in 0.5s;
+    animation:fadeIn ease-in 0.5s;
+}
+
+.project-main .hexagon-on {	
+	background: red;
+	background: url("http://api.martijngrul.nl/img/0413528001395167166");
+}
+
+@-webkit-keyframes fadeIn { from { opacity:0; top: -10%; } to { opacity:1; top: 0px; } }
+@-moz-keyframes fadeIn { from { opacity:0; top: -10%; } to { opacity:1; top: 0px; } }
+@keyframes fadeIn { from { opacity:0;  top: -10%; } to { opacity:1; top: 0px; } }
+
+.project-main .hexagon {
+	height: 90%;
+	width: 100%;
+	top: 15%;
+	left: -3%;
+	position: absolute;
+}

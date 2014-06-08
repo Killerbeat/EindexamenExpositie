@@ -1,0 +1,121 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8">
+
+	<title>Dashboard</title>
+
+	<link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,700' rel='stylesheet' type='text/css'>
+	<link href="css/reset.css" rel="stylesheet">
+	<link href="css/bigvideo.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="http://vjs.zencdn.net/4.3/video.js"></script>
+
+	<script src="js/socket.io.js"></script>
+	<script src="js/bigvideo.js"></script>
+
+	<script src="js/lib/main.lib.js"></script>
+	<script src="js/lib/cursor.lib.js"></script>
+	<script src="js/lib/landing.lib.js"></script>
+	<script src="js/lib/app.lib.js"></script>
+	<script src="js/lib/overlap.lib.js"></script>
+
+</head>
+
+<body>
+
+	<section id="landing">
+
+		<header></header>
+
+		<article>
+
+			<div class="container">
+
+				<div id="app">
+
+					<div id="app_pane">
+
+						<div id="app_header">Eindexamen Expositie</div>
+
+						<span id="auth_code">AUTH</span>
+
+						<div id="app_touchpad">
+							<div id="app_touch"></div>
+						</div>
+
+					</div>
+					
+				</div>
+
+				<div id="intro">
+					<h1>Examen</h1>
+					<h1>Expositie</h1>
+					<div id="info_box">
+						<h2>Scherm bedienen?</h2>
+						<p>Pak je smartphone, ga naar expositie.ma en vul de code <span id="auth_code_small">AUTH</span> in</p>
+					</div>
+					<p id="desktop_view">Ik wil de projecten zonder telefoon bekijken.</p>
+				</div>
+
+			</div>
+
+		</article>
+
+	</section>
+
+	<section id="dashboard">
+
+		<div class="cursor"></div>
+
+		<div id="projects">
+
+			<div class="project id-1" data-id="1">
+				<div class="hexagon">
+					<div class="hexagon-in"><div class="hexagon-on" style="background: url(http://api.martijngrul.nl/img/0413528001395167166); background-size: contain;"></div></div>
+				</div>
+			</div>
+
+			<div class="project id-2" data-id="2">
+				<div class="hexagon">
+					<div class="hexagon-in"><div class="hexagon-on" style="background: url(http://martijngrul.nl/wp-content/uploads/2013/03/nhmoetblijven.png); background-size: contain;"></div></div>
+				</div>
+			</div>
+
+			<div class="project id-3" data-id="3">
+				<div class="hexagon">
+					<div class="hexagon-in"><div class="hexagon-on" style="background: url(http://martijngrul.nl/wp-content/uploads/2013/02/fb-mutual.png); background-size: contain;"></div></div>
+				</div>
+			</div>
+
+			<div class="project id-4" data-id="4">
+				<div class="hexagon">
+					<div class="hexagon-in"><div class="hexagon-on" style="background: url(http://martijngrul.nl/wp-content/uploads/2013/02/sajv.png); background-size: contain;"></div></div>
+				</div>
+			</div>
+
+		</div>		
+
+	</section>
+
+	<section id="project">
+
+		<div id="overlay">
+
+			<div class="project-main">
+				<div class="hexagon">
+					<div class="hexagon-in"><div class="hexagon-on"></div></div>
+				</div>
+				<div class="project-slide-container">Projectnaam hierzooo</div>
+			</div>
+
+		</div>		
+
+	</section>
+
+</body>
+</html>
