@@ -23,14 +23,20 @@
 	<script src="js/lib/landing.lib.js"></script>
 	<script src="js/lib/app.lib.js"></script>
 	<script src="js/lib/overlap.lib.js"></script>
+	<script src="js/lib/display_project.lib.js"></script>
 
 </head>
 
 <body>
 
+	
+
 	<section id="landing">
 
-		<header></header>
+		<header>
+			<div id="thumbnail_overlay"></div>
+			<div id="thumbnail_container"></div>
+		</header>
 
 		<article>
 
@@ -67,35 +73,63 @@
 		</article>
 
 	</section>
+	
+	<div class="cursor" data-project="none"></div>
 
 	<section id="dashboard">
 
-		<div class="cursor"></div>
+		
+
+		<div id="scroll_elements">
+
+			<div class="scroll_top"></div>
+			<div class="scroll_bottom"></div>
+
+			<div class="scroll_left"></div>
+			<div class="scroll_right"></div>
+
+		</div>
 
 		<div id="projects">
 
-			<div class="project id-1" data-id="1">
-				<div class="hexagon">
-					<div class="hexagon-in"><div class="hexagon-on" style="background: url(http://api.martijngrul.nl/img/0413528001395167166); background-size: contain;"></div></div>
-				</div>
-			</div>
+			<div id="project_container">
 
-			<div class="project id-2" data-id="2">
-				<div class="hexagon">
-					<div class="hexagon-in"><div class="hexagon-on" style="background: url(http://martijngrul.nl/wp-content/uploads/2013/03/nhmoetblijven.png); background-size: contain;"></div></div>
-				</div>
-			</div>
+				<article class="project" data-id="1586539" style="background-image: url(http://jaarboek2014.hosts.ma-cloud.nl/uploads/gl6TCjPpNkuuTkQSJMBPxzqQqtw0UWGiX6oPHji7_huisstijl-compleet.jpg)">
+					<div class="project_header">
+						<h2>Huisstijl Tweestrijd</h2>
+						<div class="project_creator">
+							<img src="http://jaarboek2014.hosts.ma-cloud.nl/uploads/A4NzdtDhpgxA4g3baFiCejlR7UhyehBnFrb34sX3_foto.jpg">
+						</div>
+					</div>
+				</article>
 
-			<div class="project id-3" data-id="3">
-				<div class="hexagon">
-					<div class="hexagon-in"><div class="hexagon-on" style="background: url(http://martijngrul.nl/wp-content/uploads/2013/02/fb-mutual.png); background-size: contain;"></div></div>
-				</div>
-			</div>
+				<article class="project" data-id="1587023" style="background-image: url(http://jaarboek2014.hosts.ma-cloud.nl/uploads/2fpFJjR9SUkN53ipitrEU8qjSE6djWQCKgPCCUhY_website%20voorstel.jpg)">
+					<div class="project_header">
+						<h2>Website voorstellen Mediapublicaties</h2>
+						<div class="project_creator">
+							<img src="http://jaarboek2014.hosts.ma-cloud.nl/uploads/o9eNEr6rjQKTif5IojZkHp1fGLKAiM0iCCBpUuAV_profielfoto.jpg">
+						</div>
+					</div>
+				</article>
 
-			<div class="project id-4" data-id="4">
-				<div class="hexagon">
-					<div class="hexagon-in"><div class="hexagon-on" style="background: url(http://martijngrul.nl/wp-content/uploads/2013/02/sajv.png); background-size: contain;"></div></div>
-				</div>
+				<article class="project" data-id="1585648" style="background-image: url(http://jaarboek2014.hosts.ma-cloud.nl/uploads/ajpy8um01W514DWt8hke7LOxVgaVbd8exek2wnfh_creatcha.png)">
+					<div class="project_header">
+						<h2>Creatcha</h2>
+						<div class="project_creator">
+							<img src="http://jaarboek2014.hosts.ma-cloud.nl/uploads/BxNMMnIZV4GtUPPnFmyYOdXz8FKEj5BZrUb79Tsj_profielfoto.jpg">
+						</div>
+					</div>
+				</article>
+
+				<article class="project" data-id="67" style="background-image: url(http://jaarboek2014.hosts.ma-cloud.nl/uploads/4tMWGUqkcHBEXre5fzmvLHGTuUXGYdwaIyX43eHE_Kerstkaa3rt.jpg)">
+					<div class="project_header">
+						<h2>Kerstkaart</h2>
+						<div class="project_creator">
+							<img src="http://jaarboek2014.hosts.ma-cloud.nl/uploads/VHd5HA3S8xoXv3IF09xPCd1Jny3Gw5B2U01kjlJ0_1510419_682341315155660_1040488765436256159_n.jpg">
+						</div>
+					</div>
+				</article>
+
 			</div>
 
 		</div>		
@@ -103,17 +137,17 @@
 	</section>
 
 	<section id="project">
+		
+		<div id="project_background" style="background-image: url(http://jaarboek2014.hosts.ma-cloud.nl/uploads/4tMWGUqkcHBEXre5fzmvLHGTuUXGYdwaIyX43eHE_Kerstkaa3rt.jpg)"></div>
 
-		<div id="overlay">
-
-			<div class="project-main">
-				<div class="hexagon">
-					<div class="hexagon-in"><div class="hexagon-on"></div></div>
-				</div>
-				<div class="project-slide-container">Projectnaam hierzooo</div>
+		<article id="project_display">
+			<h2>Kerstkaart</h2>
+			<div id="close_project" class="close"><img src="img/close.png"></div>
+			<div id="project_image" >
+				<img src="http://jaarboek2014.hosts.ma-cloud.nl/uploads/4tMWGUqkcHBEXre5fzmvLHGTuUXGYdwaIyX43eHE_Kerstkaa3rt.jpg">
 			</div>
-
-		</div>		
+			<p>Op stage kreeg ik de opdracht om een kerstkaart te maken met het thema van de game (Lost Oddies) waar ik aan werkte. Ben erg tevreden met het resultaat heb heb er veel van geleerd.</p>
+		</article>
 
 	</section>
 

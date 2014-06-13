@@ -1,15 +1,20 @@
-var socket 			= io.connect('http://192.168.1.110:1337');
+var socket 			= io.connect('http://172.17.50.224:1337');
 
 $(function(){
+	
+	socket.emit('install', {
+		device: "dashboard"
+	});
 
 	socket.on('connected', function (data) {
 		if(data == true){
 			$("#landing").remove();
-			$("#dashboard").show();
+			$("#dashboard, .cursor").show();
 		}
 	});
 
 	socket.on('code', function (data) {
+		console.log(data);
 		$("#auth_code, #auth_code_small").html(data);
   	});
 

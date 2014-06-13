@@ -60,6 +60,8 @@ io.sockets.on('connection', function (socket) {
         "in_use": false
       };
 
+      console.log("login code: ", auth)
+
       //Send code to dash
       io.sockets.socket(socket_id).emit("code", auth);
 

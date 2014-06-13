@@ -1,4 +1,4 @@
-var socket 			= io.connect('http://192.168.1.110:1337');
+var socket 			= io.connect('http://172.17.50.224:1337');
 var controll		= false;
 var project			= false;
 
@@ -27,6 +27,14 @@ $(function(){
 
 	socket.on('reset', function (data) {
 		location.reload();
+  	});
+
+	$(window).on("pagehide", window,function(){
+		location.reload();
+	});
+
+  	$(window).blur(function(){
+  		location.reload();
   	});
 
 });
