@@ -248,3 +248,42 @@ article {
 	height: 100%;
 	background: #F4F4F4;
 }
+
+.contentText {
+	height: 50px;
+	text-align: center;
+	width: 100%;
+}
+
+.contentText span {
+	background-color: #FF009A;
+	border: 1px #FF009A solid;
+	padding: 11px;
+	border-radius: 5px;
+	color: white;
+	top: 15px;
+	display: block;
+	position: relative;
+}
+
+.contentText p {
+	position: absolute;
+	width: 40%;
+}
+
+.project_description {
+	background: #F8F8F8;
+	border: 1px #DFDFDF solid;
+	margin-top: 15px;
+}
+
+.logout {
+	display: none;
+	position: fixed;
+	width: 80%;
+	padding: 10%;
+	background: #F4F4F4;
+	height: 100%;
+	top: 0px;
+	z-index: 9;
+}

@@ -8,17 +8,19 @@ $(window).on('touchmove', function(e){
 	      
 	//console.log('y: '+touch.pageY+' x:'+touch.pageX);
 
-	var top 			= touch.pageY,
-		left			= touch.pageX,
+	var top 			= touch.pageY;
+	var left			= touch.pageX;
 
-		touch_width		= $(".touch").outerWidth(),
-		touch_height	= $(".touch").outerHeight(),
+	var touch_width		= $(".touch").outerWidth();
+	var touch_height	= $(".touch").outerHeight();
 
-		broadcast_x		= left - $(".touchpad").offset().left,
-		broadcast_y		= top - $(".touchpad").offset().top,
+	var broadcast_x		= left - $(".touchpad").offset().left;
+	var broadcast_y		= top - $(".touchpad").offset().top;
 
-		touchpad_width	= $(".touchpad").outerWidth(),
-		touchpad_height	= $(".touchpad").outerHeight();
+	var touchpad_width	= $(".touchpad").outerWidth();
+	var touchpad_height	= $(".touchpad").outerHeight();
+
+	console.log($(".touchpad").outerWidth(), $(".touchpad").outerHeight());
 
 	//console.log('y: '+broadcast_y+' x:'+broadcast_x);
 

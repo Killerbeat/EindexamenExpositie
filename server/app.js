@@ -32,11 +32,9 @@ io.sockets.on('connection', function (socket) {
           connection[key]["in_use"] = true;
 
           connect_to_dashboard[connection[key]["mobile"]]       = connection[key]["dashboard"];
-          connect_to_controller[connection[key]["dasbhoard"]]   = connection[key]["mobile"];
+          connect_to_controller[connection[key]["dashboard"]]   = connection[key]["mobile"];
 
           io.sockets.socket(connection[key]["dashboard"]).emit("connected", true);
-
-          console.log(connection);
 
         }else{
           io.sockets.socket(socket_id).emit("login", false);
@@ -83,24 +81,28 @@ io.sockets.on('connection', function (socket) {
 
   });
 
-  socket.on('project', function (data) {
+  socket.on('project_active', function (data) {
 
-    io.sockets.socket(connect_to_controller[socket_id]).emit('project', {
+  	io.sockets.socket(connect_to_controller[socket_id]).emit('project_active', { project: data.project});
 
-      id: data.project.id,
-      title: data.project.title,
-      hover: data.project.hover
-
-    });
-
-    console.log(data.project.hover)
+    console.log("hover?:  ", data.active)
 
   });
 
-  socket.on('slider', function (data) {
+  socket.on('project_click', function (data) {
+    io.sockets.socket(connect_to_dashboard[socket_id]).emit('project_click', { project_click: data.project_click});
+  });
 
-  	console.log(data.operation);
+  socket.on('back', function (data) {
+    io.sockets.socket(connect_to_dashboard[socket_id]).emit('back', { back: data.back});
+  });
 
+  socket.on('logout_ask', function (data) {
+    io.sockets.socket(connect_to_controller[socket_id]).emit('logout_ask', { logout_ask: true});
+  });
+
+  socket.on('logout', function (data) {
+    io.sockets.socket(connect_to_dashboard[socket_id]).emit('reset', { logout: true});
   });
 
   socket.on('disconnect', function () {  

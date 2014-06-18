@@ -17,11 +17,13 @@ $(function(){
 
 	//Sockets to move mouse
 	socket.on('newmove', function (data) {
-		console.log(data.mouse_x);
-		var dynamic_size_x = map(data.mouse_x, 0, data.screen_w, 0,  $(window).outerWidth());
-		var dynamic_size_y = map(data.mouse_y, 0, data.screen_h, 0,  $(window).outerHeight());
+		var screen_width 	= data.screen_w;
+		var screen_heigth 	= data.screen_h;
 
-		console.log(dynamic_size_x);
+		var dynamic_size_x = map(data.mouse_x, 0, screen_width, 0,  $(window).outerWidth());
+		var dynamic_size_y = map(data.mouse_y, 0, screen_heigth, 0,  $(window).outerHeight());
+			//dynamic_size_y = dynamic_size_y - $(".cursor").outerWidth() / 2;
+			//dynamic_size_x = dynamic_size_x - $(".cursor").outerWidth() / 2;
 
 		// var b 	= $(window).outerWidth() / data.screen_w;
 		// var x 	= data.mouse_x - $(".cursor").outerWidth() / 2;

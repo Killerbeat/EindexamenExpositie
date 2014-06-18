@@ -19,14 +19,14 @@ function check_overlay(pointer) {
             switch($(this).attr("class")) {
 
                 case "scroll_top":
-                    var new_pos = $("#projects").scrollTop() - 10;
+                    var new_pos = $("#projects").scrollTop() - 20;
                     $("#projects").scrollTop(new_pos);
 
                     return false;
                 break;
 
                 case "scroll_bottom":
-                    var new_pos = $("#projects").scrollTop() + 10;
+                    var new_pos = $("#projects").scrollTop() + 20;
                      $("#projects").scrollTop(new_pos)
 
                     return false;
@@ -44,8 +44,6 @@ function check_overlay(pointer) {
 
     if(count == 1){
 
-        console.log($(item).attr("class"))
-
         switch($(item).attr("class")) {
 
             //If a project is hovered do stuff
@@ -53,13 +51,8 @@ function check_overlay(pointer) {
                 $(item).css("opacity", "1")
                 $(".cursor").attr("data-project",  $(item).attr("data-id"));
 
-                socket.emit('project', { 
-                    project: {
-                        id: "",
-                        title: "",
-                        hover: true
-                    } 
-                });
+                displayInApp(parseInt($(item).attr("data-id")));
+
             break;
 
             case "close_project":
@@ -71,6 +64,8 @@ function check_overlay(pointer) {
             case "logout_panel":
                 $(item).addClass("active");
                 $(".cursor").attr("data-project",  "logout");
+
+                socket.emit('logout_ask', { logout_ask: true }); 
 
             break;
 
@@ -91,8 +86,8 @@ function check_overlay(pointer) {
 
         $(".cursor").attr("data-project",  "none");
 
-        socket.emit('project', { 
-            project: { hover: false } 
+        socket.emit('project_active', { 
+            project: { active: false } 
         }); 
     }
 }
