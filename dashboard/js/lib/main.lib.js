@@ -1,4 +1,5 @@
 var socket 			= io.connect('http://172.17.50.224:1337');
+var all_projects	= "";
 
 $(function(){
 	

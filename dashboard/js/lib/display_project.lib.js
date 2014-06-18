@@ -25,23 +25,18 @@ function showProject(project_id){
 
 	console.log("id:", project_id)
 
-	$.ajax({
-		url: "http://api.dribbble.com/shots/"+ project_id,
-		success: function(project){
+	$.each(all_projects, function(key, item){
+		if(project_id == item.id){
 
-			console.log(project)
+			$("#project_display p").html(item.description);
+			$("#project_display h2").html(item.name);
+			$("#project_image img").attr("src", item.screenshot);
 
-			$("#project_display p").html(project.description);
-			$("#project_display h2").html(project.title);
-			$("#project_image img").attr("src", project.image_url);
-
-			$("#project_background").css("background-image", "url("+ project.image_url +")");
+			$("#project_background").css("background-image", "url("+ item.screenshot +")");
 			
 			$("#project").addClass("active");
-			
-		},
-		dataType: "jsonp"
-	});
 
+		}
+	});
 	
 }
