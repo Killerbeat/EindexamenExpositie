@@ -323,7 +323,7 @@ body {
 	margin-top: 5px;
 	height: 35px;
 
-	-webkit-mask-image: linear-gradient(to right, rgba(255,0,154,1) 0%,rgba(255,0,154,1) 64%,rgba(255,0,154,0) 75%,rgba(255,0,154,0) 100%);
+	-webkit-mask-image: linear-gradient(to right, rgba(255,0,154,1) 0%,rgba(255,0,154,1) 64%,rgba(255,0,154,0) 70%,rgba(255,0,154,0) 100%);
 }
 
 #scroll_elements {
@@ -411,7 +411,7 @@ body {
 	top: -100%;
 
 	-webkit-transform:  translateZ(0);
-	transition: opacity 200ms ease;
+	transition: opacity 500ms;
 }
 
 #project.active {
@@ -420,9 +420,7 @@ body {
 }
 
 #project.active #project_display {
-	opacity: 1;
-	margin-top: 0px;
-	height: 100%;
+	-webkit-transform: scale(1);
 }
 
 #project_background {
@@ -438,17 +436,18 @@ body {
 
 #project_display {
 	width: 960px;
-	height: 100%;
 	background-color: white;
 	position: relative;
 	margin: 0 auto;
 	box-shadow: 0 0 25px 0px #000;
-	height: 345px;
 	overflow: hidden;
-	margin-top: -345px;
+	opacity: 1;
+	height: 100%;
 
-	transition: all 200ms ease;
-	transition-delay: 200ms;
+	-webkit-transform: scale(0);
+
+	transition: all 200ms;
+	transition-delay: 500ms;
 }
 
 #project_image {

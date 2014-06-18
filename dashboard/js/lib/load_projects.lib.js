@@ -3,7 +3,6 @@ $(function(){
 	var count = 0;
 
 	$.getJSON('http://ma-jaarboek.nl/api/v1/courses/6', mergeProjects);
-
 	$.getJSON('http://ma-jaarboek.nl/api/v1/courses/8', mergeProjects);
 
 	function mergeProjects(projects){
@@ -28,7 +27,7 @@ $(function(){
 
 			console.log(item.id, image_thumb, item.value)
 
-	    	$("#project_container").append("<article class='project' data-id='"+ item.id +"' style='background-image: url("+ image_thumb +");'><div class='project_header'><h2>"+ item.name +"</h2><div class='project_creator'><img src='"+ item.user.avatar +"'></div></div></article>");
+	    	$("#project_container").append("<article class='project' data-id='"+ item.id +"' style='background-image: url("+ image_thumb +");'><div class='project_header'><h2>"+ item.name +"</h2><div class='project_creator'><img src='"+ item.user.avatar +"'></div></div><img src='http://jaarboek2014.hosts.ma-cloud.nl/uploads/"+ item.value +"' style='display:none;'></article>");
 
 	    });
 	}
