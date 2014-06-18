@@ -2,9 +2,13 @@ $(function(){
 
 	$(".cursor").click(function(){
 
-		if($(this).attr("data-project") !== "none" && $(this).attr("data-project") !== "back"){
+		if($(this).attr("data-project") !== "none" 
+			&& $(this).attr("data-project") !== "back" 
+			&& $(this).attr("data-project") !== "logout"){
+
 			showProject($(this).attr("data-project"));
 			$(this).attr("data-project", "none");
+			$(".logout_panel").hide();
 
 			setTimeout(function(){
 				$("#dashboard").hide();
@@ -12,8 +16,14 @@ $(function(){
 
 		}
 
+		if($(this).attr("data-project") == "logout"){
+			location.reload();
+		}
+
 		if($(this).attr("data-project") == "back"){
 			$("#dashboard").show();
+			$(".logout_panel").show();
+
 			$("#project").removeClass("active");
 		}
 

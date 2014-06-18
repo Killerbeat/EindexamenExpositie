@@ -334,7 +334,6 @@ body {
 .scroll_bottom,
 .scroll_left,
 .scroll_right {
-	//border: 1px solid black;
 	position: fixed;
 }
 
@@ -354,11 +353,54 @@ body {
 	width: 60px;
 }
 
-.scroll_right {
-	height: 100%;
-	width: 60px;
+.logout_panel {
 	right: 0px;
+	position: fixed;
+	z-index: 1;
+	height: 100%;
+	transition: width 200ms ease;
+	overflow: visible;
+	width: 100px;
 }
+
+.logout_menu {
+	height: 100%;
+	width: 30px;
+	right: 0px;
+	position: fixed;
+	background-color: #FF009A;
+}
+
+.logout_panel.active {
+	width: 130px;
+}
+
+.logout_panel.active .logout_menu {
+	width: 130px;
+}
+
+#close_dashboard {
+	position: relative;
+	margin-left: -30px;
+	top: 50%;
+	margin-top: -30px;
+}
+
+#close_dashboard span {
+	color: white;
+	font-size: 20px;
+	text-transform: uppercase;
+	margin-top: -40px;
+	margin-left: 65px;
+	display: block;
+}
+
+#close_dashboard img {
+	width: 60px;
+	height: auto;
+}
+
+
 
 /*Project*/
 
@@ -445,6 +487,7 @@ body {
 	margin-top: 15px;
 	overflow: hidden;
 	height: 80px;
+	border-radius: 17px;
 }
 
 #close_project img {

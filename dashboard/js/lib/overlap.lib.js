@@ -8,7 +8,7 @@ function check_overlay(pointer) {
     var count   = 0;
     var item;
 
-    $(".project, .scroll_top, .scroll_bottom, .close").each(function() {
+    $(".project, .scroll_top, .scroll_bottom, .close_project, .logout_panel").each(function() {
 
         var thisPos     = $(this).offset();
         var i_x         = [thisPos.left, thisPos.left + $(this).outerWidth()]
@@ -62,9 +62,15 @@ function check_overlay(pointer) {
                 });
             break;
 
-            case "close":
+            case "close_project":
                 $(item).addClass("active");
                 $(".cursor").attr("data-project",  "back");
+
+            break;
+
+            case "logout_panel":
+                $(item).addClass("active");
+                $(".cursor").attr("data-project",  "logout");
 
             break;
 
@@ -76,6 +82,7 @@ function check_overlay(pointer) {
 
         if($('#dashboard').is(':visible')) {
             $(item).css("opacity", "0.8");
+            $(".logout_panel").removeClass("active");
         }
 
         if($('#project').is(':visible')) {
