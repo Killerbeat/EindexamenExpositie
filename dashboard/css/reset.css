@@ -30,6 +30,7 @@
 
 	h1 {
 		font-size: 35px;
+		text-shadow: 1px 1px 5px #FFFFFF, -1px -1px 5px #FFFFFF;
 		line-height: 50px;
 	}
 
