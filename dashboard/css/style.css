@@ -261,10 +261,11 @@ body {
 }
 
 #project_container {
-	top: 50px;
-	margin-left: 50px;
 	position: relative;
-	width: 155%;
+	width: 100%;
+	overflow: auto;
+	margin-left: 50px;
+	margin-top:50px;
 }
 
 #projects {
@@ -273,15 +274,20 @@ body {
 }
 
 .project {
-	width: 450px;
+	width: 27%;
 	height: 220px;
 	border: 1px solid black;
 	position: relative;
 	box-shadow: 0 0 15px 0px #454545;
 	border-radius: 3px;
 	float: left;
-	margin-right: 50px;
-	margin-bottom: 50px;
+	margin-right: 5%;
+	margin-bottom: 5%;
+	background-color: white;
+}
+
+.project:nth-of-type(3n+0){
+	margin-right: 0px;
 }
 
 .project_header {

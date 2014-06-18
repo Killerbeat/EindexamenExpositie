@@ -8,7 +8,7 @@ function check_overlay(pointer) {
     var count   = 0;
     var item;
 
-    $(".project, .scroll_right, .scroll_left, .scroll_top, .scroll_bottom, .close").each(function() {
+    $(".project, .scroll_top, .scroll_bottom, .close").each(function() {
 
         var thisPos     = $(this).offset();
         var i_x         = [thisPos.left, thisPos.left + $(this).outerWidth()]
@@ -18,40 +18,16 @@ function check_overlay(pointer) {
 
             switch($(this).attr("class")) {
 
-                case "scroll_right":
-                    var new_pos = $("#projects").scrollLeft() + 50;
-
-                    $("#projects").stop().animate({
-                        scrollLeft: new_pos
-                    }, 100);
-
-                    return false;
-                break;
-
-                case "scroll_left":
-                    var new_pos = $("#projects").scrollLeft() - 50;
-                    
-                    $("#projects").stop().animate({
-                        scrollLeft: new_pos
-                    }, 100);
-
-                    return false;
-                break;
-
                 case "scroll_top":
-                    var new_pos = $("#projects").scrollTop() - 50;
-                    
-                    $("#projects").stop().animate({
-                        scrollTop: new_pos
-                    }, 100);
+                    var new_pos = $("#projects").scrollTop() - 10;
+                    $("#projects").scrollTop(new_pos);
+
                     return false;
                 break;
 
                 case "scroll_bottom":
-                    var new_pos = $("#projects").scrollTop() + 50;
-                    $("#projects").stop().animate({
-                        scrollTop: new_pos
-                    }, 100);
+                    var new_pos = $("#projects").scrollTop() + 10;
+                     $("#projects").scrollTop(new_pos)
 
                     return false;
                 break;

@@ -30,9 +30,9 @@ function showProject(project_id){
 
 			$("#project_display p").html(item.description);
 			$("#project_display h2").html(item.name);
-			$("#project_image img").attr("src", item.screenshot);
+			$("#project_image img").attr("src", "http://jaarboek2014.hosts.ma-cloud.nl/uploads/"+ item.value);
 
-			$("#project_background").css("background-image", "url("+ item.screenshot +")");
+			$("#project_background").css("background-image", "url(http://jaarboek2014.hosts.ma-cloud.nl/uploads/"+ encodeURIComponent(item.value) +")");
 			
 			$("#project").addClass("active");
 
