@@ -50,6 +50,7 @@ function createProject(project_id){
 			$("#project_display h2").html(item.name);
 			$("#project_display h5").html(item.user.full_name);
 			$("#project_display span").html(item.user.class);
+			$("#project_display aside a").html("");
 
 			if(item.url !== ""){
 				$("#project_display aside a").attr("href", item.url).html(item.url);
