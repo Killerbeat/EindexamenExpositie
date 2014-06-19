@@ -48,13 +48,13 @@ $(function(){
   		$(".logout").show();
   	});
 
-	/*$(window).on("pagehide", window,function(){
+	$(window).on("pagehide", window,function(){
 		location.reload();
 	});
 
   	$(window).blur(function(){
   		location.reload();
-  	});*/
+  	});
 
 });
 
