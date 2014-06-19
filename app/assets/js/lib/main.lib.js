@@ -1,4 +1,4 @@
-var socket 			= io.connect('http://192.168.3.18:1337');
+var socket 			= io.connect('http://10.66.68.167:1337');
 var controll		= false;
 var project			= false;
 

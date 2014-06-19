@@ -85,8 +85,6 @@ io.sockets.on('connection', function (socket) {
 
   	io.sockets.socket(connect_to_controller[socket_id]).emit('project_active', { project: data.project});
 
-    console.log("hover?:  ", data.active)
-
   });
 
   socket.on('project_click', function (data) {
@@ -118,8 +116,6 @@ io.sockets.on('connection', function (socket) {
         break;
 
       }
-
-      console.log(connection[key]["mobile"])
 
       if(socket_id == connection[key]["mobile"]){
 
