@@ -30,8 +30,10 @@
 
 	h1 {
 		font-size: 35px;
-		text-shadow: 1px 1px 5px #FFFFFF, -1px -1px 5px #FFFFFF;
+		color: #FFFFFF;
 		line-height: 50px;
+		font-weight: normal;
+		padding-left: 10px;
 	}
 
 	h2 {

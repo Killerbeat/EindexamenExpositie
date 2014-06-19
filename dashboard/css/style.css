@@ -99,17 +99,12 @@ body {
 	}
 }
 
-#landing header .project_container {
-	height: 50%;
-	float: left;
-	width: 25%;
-	overflow: hidden;
-}
-
 #landing header #thumbnail_container {
 	position: relative;
 	width: 100%;
-	height: 100%;
+	margin-top: 90px;
+	height: 120px;
+	background-color: rgba(0,0,0,0.5);
 }
 
 
