@@ -13,13 +13,13 @@ var connect_to_dashboard = {};
 var connect_to_controller = {};
 
 io.sockets.on('connection', function (socket) {
-  
+
   //save client id
   var socket_id   = socket.id;
-  
+
   //Clients install first to get connected
   socket.on('install', function (data) {
-    
+
     //Check device task
     if(data.device == "controller"){
 
@@ -40,7 +40,7 @@ io.sockets.on('connection', function (socket) {
           io.sockets.socket(socket_id).emit("login", false);
 
         }
-       
+
       }
 
     }
@@ -103,14 +103,14 @@ io.sockets.on('connection', function (socket) {
     io.sockets.socket(connect_to_dashboard[socket_id]).emit('reset', { logout: true});
   });
 
-  socket.on('disconnect', function () {  
+  socket.on('disconnect', function () {
 
     console.log("client disconnect: "+ socket_id);
 
     for(var key in connection) {
 
       if(socket_id == connection[key]["dashboard"]){
-        
+
         io.sockets.socket(connect_to_controller[socket_id]).emit('reset', { data: true });
         delete connection[key];
         break;
