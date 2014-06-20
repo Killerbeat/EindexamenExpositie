@@ -20,8 +20,15 @@ $(function(){
 	}
 
 	function createProjectThumbs(json_object){
+		var count = 0;
 
 		$.each(all_projects, function(key, item){
+
+			if(count == 6){
+				return false;
+			}
+
+			//count++;
 
 	    	var image_thumb = item.screenshot.replace(" ", "%20");
 

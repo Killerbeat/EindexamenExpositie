@@ -1,4 +1,4 @@
-var socket 			= io.connect('http://192.168.3.18:1337');
+var socket 			= io.connect('http://172.17.50.70:1337');
 var all_projects	= "";
 
 $(function(){
