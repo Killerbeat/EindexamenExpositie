@@ -3,7 +3,7 @@ var app = require('http').createServer()
   , fs = require('fs')
   , url = require('url')
 
-app.listen(1337);
+app.listen(process.env.PORT | 1337);
 
 //Main connection object to save screen and mobile
 var connection = {};
