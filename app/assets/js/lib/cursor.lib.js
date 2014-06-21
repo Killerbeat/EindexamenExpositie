@@ -5,7 +5,7 @@ $(window).on('touchmove', function(e){
 	}
 
 	var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
-	      
+
 	//console.log('y: '+touch.pageY+' x:'+touch.pageX);
 
 	var top 			= touch.pageY;
@@ -24,7 +24,7 @@ $(window).on('touchmove', function(e){
 
 	//console.log('y: '+broadcast_y+' x:'+broadcast_x);
 
-	if($(".touchpad").offset().left + touch_width / 2 < left && 
+	if($(".touchpad").offset().left + touch_width / 2 < left &&
 		$(".touchpad").offset().left + touchpad_width - touch_width / 2 > left &&
 		 $(".touchpad").offset().top + touch_height / 2 < top &&
 		  $(".touchpad").offset().top + touchpad_height - touch_height / 2 > top){
@@ -36,8 +36,8 @@ $(window).on('touchmove', function(e){
 
 			socket.emit('move', {
 
-				position: { 
-			  		x: broadcast_x, 
+				position: {
+			  		x: broadcast_x,
 			  		y: broadcast_y
 		  		},
 		  		phone: {

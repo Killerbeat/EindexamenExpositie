@@ -1,5 +1,5 @@
 $(function(){
-	
+
 	//Event to place mouse on cursor position
 	$(document).mousemove(function(e){
 
@@ -45,7 +45,7 @@ $(function(){
 		check_overlay(".cursor");
 
 	});
-	
+
 });
 
 function map(value, in_min, in_max, out_min, out_max)

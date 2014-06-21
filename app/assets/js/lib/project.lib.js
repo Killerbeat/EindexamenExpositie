@@ -3,7 +3,7 @@ $(function(){
 	socket.on('project_active', function (data) {
 
 		console.log(data.project);
-		
+
 		if(data.project.active == true){
 
 			$(".touchpad").css("border","3px solid #FF009A");
@@ -11,7 +11,7 @@ $(function(){
 
 			$(".contentText span").attr("data-id", data.project.id).show();
 			$(".contentText p").hide();
-			
+
 			$("#project h1").html(data.project.title);
 			$("#project h3").html(data.project.name);
 			$("#project .details").html(data.project.text);

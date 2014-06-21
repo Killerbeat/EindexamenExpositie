@@ -3,7 +3,7 @@ $(function(){
 
 
 	$("button.login").click(function(){
-		
+
 		var code = $(".code").val();
 
 		socket.emit('install', {

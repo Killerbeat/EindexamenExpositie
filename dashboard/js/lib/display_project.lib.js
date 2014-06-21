@@ -10,8 +10,8 @@ $(function(){
 
 function checkClick(){
 
-	if($(".cursor").attr("data-project") !== "none" 
-		&& $(".cursor").attr("data-project") !== "back" 
+	if($(".cursor").attr("data-project") !== "none"
+		&& $(".cursor").attr("data-project") !== "back"
 		&& $(".cursor").attr("data-project") !== "logout"){
 
 		createProject($(".cursor").attr("data-project"));
@@ -30,7 +30,7 @@ function checkClick(){
 	}
 
 	if($(".cursor").attr("data-project") == "back"){
-			
+
 		$("#dashboard").show();
 		$(".logout_panel").show();
 		$("#project").css("opacity", 0);
@@ -60,10 +60,10 @@ function createProject(project_id){
 			$("#project_display aside img").attr("src", item.user.avatar);
 
 			$("#project_background").css("background-image", "url(http://jaarboek2014.hosts.ma-cloud.nl/uploads/"+ encodeURIComponent(item.value) +")");
-			
+
 			$("#project").removeClass("hide").addClass("active");
 
 		}
 	});
-	
+
 }

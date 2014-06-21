@@ -18,7 +18,7 @@ $(function(){
 			controll = false;
 
 		}
-		
+
 	});
 
 	$("body").on("touchend", ".logout_no", function(){
@@ -26,7 +26,7 @@ $(function(){
 	});
 
 	$("body").on("touchend", ".logout_yes", function(){
-		socket.emit('logout', { logout: true});		
+		socket.emit('logout', { logout: true});
 	});
 
 	$("#project header").on("touchend", function(){
@@ -36,7 +36,7 @@ $(function(){
 		$("#pane").css({"left": "0px"});
 
 		goBackOnDashboard();
-		
+
 	});
 
 	socket.on('reset', function (data) {

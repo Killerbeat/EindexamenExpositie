@@ -25,19 +25,19 @@ function check_overlay(pointer) {
     if(count == 1){
         $(item).css("background-color", "green");
 
-        socket.emit('project', { 
+        socket.emit('project', {
             project: {
                 id: 23,
                 title: $(item).html(),
                 hover: true
-            } 
+            }
         });
 
     }else{
         $('li').css("background-color", "red");
 
-        socket.emit('project', { 
-            project: { hover: false } 
-        });        
+        socket.emit('project', {
+            project: { hover: false }
+        });
     }
 }

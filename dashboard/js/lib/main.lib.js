@@ -3,7 +3,7 @@ var socket = io.connect('http://' + (location.host || 'localhost').split(':')[0]
 var all_projects	= "";
 
 $(function(){
-	
+
 	socket.emit('install', {
 		device: "dashboard"
 	});
@@ -25,7 +25,7 @@ $(function(){
   	});
 
 	socket.on('back', function (data) {
-		
+
 		$("#dashboard").show();
 		$(".logout_panel").show();
 		$("#project").css("opacity", 0);
@@ -47,7 +47,7 @@ function displayInApp(project_id){
 	$.each(all_projects, function(key, item){
 		if(project_id == item.id){
 
-		    socket.emit('project_active', { 
+		    socket.emit('project_active', {
 		        project: {
 		            id: project_id,
 		            title: item.name,
@@ -57,7 +57,7 @@ function displayInApp(project_id){
 		            avatar: item.user.avatar,
 		            school_class: item.user.class,
 		            active: true
-		        } 
+		        }
 		    });
 
 		}

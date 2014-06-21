@@ -65,7 +65,7 @@ function check_overlay(pointer) {
                 $(item).addClass("active");
                 $(".cursor").attr("data-project",  "logout");
 
-                socket.emit('logout_ask', { logout_ask: true }); 
+                socket.emit('logout_ask', { logout_ask: true });
 
             break;
 
@@ -86,8 +86,8 @@ function check_overlay(pointer) {
 
         $(".cursor").attr("data-project",  "none");
 
-        socket.emit('project_active', { 
-            project: { active: false } 
-        }); 
+        socket.emit('project_active', {
+            project: { active: false }
+        });
     }
 }
