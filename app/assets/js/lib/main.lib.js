@@ -1,4 +1,4 @@
-var socket 			= io.connect('http://172.17.50.70:1337');
+var socket = io.connect('http://' + (location.host || 'localhost').split(':')[0] + ':1337');
 var controll		= false;
 var project			= false;
 
