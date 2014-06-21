@@ -1,4 +1,7 @@
+var allowedToMove = true;
+
 $(window).on('touchmove', function(e){
+	if(!allowedToMove) return;
 
 	if(controll == true){
 		e.preventDefault();
@@ -20,7 +23,7 @@ $(window).on('touchmove', function(e){
 	var touchpad_width	= $(".touchpad").outerWidth();
 	var touchpad_height	= $(".touchpad").outerHeight();
 
-	console.log($(".touchpad").outerWidth(), $(".touchpad").outerHeight());
+	// console.log($(".touchpad").outerWidth(), $(".touchpad").outerHeight());
 
 	//console.log('y: '+broadcast_y+' x:'+broadcast_x);
 
@@ -49,6 +52,10 @@ $(window).on('touchmove', function(e){
 
 	}
 
-
+	allowedToMove = false;
 
 });
+
+setInterval(function() {
+	if(!allowedToMove) allowedToMove = true;
+}, 20);

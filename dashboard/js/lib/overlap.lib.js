@@ -1,3 +1,5 @@
+var lastItem = null;
+
 function check_overlay(pointer) {
 
     var intersectors = [];
@@ -42,16 +44,23 @@ function check_overlay(pointer) {
 
     $(".project").css("opacity", "0.8");
 
+
+
     if(count == 1){
 
         switch($(item).attr("class")) {
 
             //If a project is hovered do stuff
             case "project":
+                var itemId = $(item).data('id');
+
+                if(lastItem == itemId) return;
+
                 $(item).css("opacity", "1")
                 $(".cursor").attr("data-project",  $(item).attr("data-id"));
-
                 displayInApp(parseInt($(item).attr("data-id")));
+
+                lastItem = $(item).data('id');
 
             break;
 

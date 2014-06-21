@@ -32,7 +32,7 @@ $(function(){
 
 	    	var image_thumb = item.screenshot.replace(" ", "%20");
 
-			console.log(item)
+			// console.log(item)
 
 	    	$("#project_container").append("<article class='project' data-id='"+ item.id +"' style='background-image: url("+ image_thumb +");'><div class='project_header'><h2>"+ item.name +"</h2><div class='project_creator'><img src='"+ item.user.avatar +"'></div></div><img src='http://jaarboek2014.hosts.ma-cloud.nl/uploads/"+ item.value +"' style='display:none;'></article>");
 

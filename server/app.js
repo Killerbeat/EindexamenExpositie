@@ -12,6 +12,11 @@ var connection = {};
 var connect_to_dashboard = {};
 var connect_to_controller = {};
 
+var throttle = {
+    allowedToMove: true,
+    projectActive: true
+};
+
 io.sockets.on('connection', function (socket) {
 
   //save client id
@@ -68,6 +73,8 @@ io.sockets.on('connection', function (socket) {
   });
 
   socket.on('move', function (data) {
+    if(!throttle.allowedToMove
+) return;
 
     io.sockets.socket(connect_to_dashboard[socket_id]).emit('newmove', {
 
@@ -79,11 +86,16 @@ io.sockets.on('connection', function (socket) {
 
     });
 
+    throttle.allowedToMove = false;
+
   });
 
   socket.on('project_active', function (data) {
+    if(!projectActive) return false;
 
-  	io.sockets.socket(connect_to_controller[socket_id]).emit('project_active', { project: data.project});
+    io.sockets.socket(connect_to_controller[socket_id]).emit('project_active', { project: data.project});
+
+    projectActive = false;
 
   });
 
@@ -135,3 +147,11 @@ io.sockets.on('connection', function (socket) {
   });
 
 });
+
+setInterval(function() {
+    if(!throttle.allowedToMove) throttle.allowedToMove = true;
+}, 50);
+
+setInterval(function() {
+    if(!throttle.projectActive) throttle.projectActive = true;
+}, 50);
