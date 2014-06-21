@@ -1,9 +1,17 @@
 {
-  "name": "EindexamenExpo",
-  "description": "Interactive display for Mediacollege Amsterdam",
+  "name": "server",
   "version": "1.0.0",
-  "homepage": "http://ma-expo.nl",
+  "description": "Server for the Expo app",
+  "main": "app.js",
   "dependencies": {
-    "socket.io": "0.9.16"
-  }
+    "socket.io": "^0.9.16"
+  },
+  "author": "Martijn Grul <norbert@martijngrul.nl> (http://martijngrul.nl)",
+  "contributors": [
+    {
+        "name": "Mujib Azizi",
+        "url": "http://mujib.nl",
+        "email": "mujib@mujib.nl"
+    }
+  ]
 }
