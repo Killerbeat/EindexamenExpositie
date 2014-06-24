@@ -57,9 +57,9 @@ function createProject(project_id){
 
 			$('#project_display aside').empty();
 
-			$.each(item.team, function(key, item) {
+			/*$.each(item.team, function(key, item) {
 				$('#project_display aside').append('<h5>' + item + '</h5>');
-			});
+			});*/
 
 
 			$("#project_image img").attr("src", item.media.screenshot);

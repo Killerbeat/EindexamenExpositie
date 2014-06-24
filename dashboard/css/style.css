@@ -407,7 +407,7 @@ body {
 /*Project*/
 
 #project {
-	background-color: black;
+	background-color: white;
 	opacity: 0;
 
 	-webkit-transform:  translateZ(0);
@@ -479,7 +479,6 @@ body {
 }
 
 #project_description {
-	 width: 75%;
 	 float: left;
 }
 

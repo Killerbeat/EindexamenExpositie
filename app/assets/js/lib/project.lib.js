@@ -2,9 +2,9 @@ $(function(){
 
 	socket.on('project_active', function (data) {
 
-		console.log(data);
-
 		if(data.active == true){
+
+			console.log(data)
 
 			$(".touchpad").css("border","3px solid #FF009A");
 			project = true;
@@ -12,8 +12,13 @@ $(function(){
 			$(".contentText span").attr("data-id", data.id).show();
 			$(".contentText p").hide();
 
-			$("#project h1").html(data.title);
-			$("#project h3").html(data.name);
+			$("#project h1").html(data.name);
+			$("#project_team").html("");
+
+			$.each(data.team, function(key, item){
+				$("#project_team").append("<h3>"+ item +"</h3>");
+			});
+
 			$("#project .details").html(data.description.long);
 
 		}else{
