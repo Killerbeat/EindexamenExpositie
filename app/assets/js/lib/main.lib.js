@@ -52,6 +52,15 @@ $(function(){
 		project 	= false;
 		$("#pane").css({"left": "0px"});
 
+		setTimeout(function(){
+
+			$("#project h1").html("");
+			$("#project_team").html("");
+			$("#project_team").append("");
+			$("#project .details").html("");
+
+		}, 200)
+
 		goBackOnDashboard();
 
 	});
