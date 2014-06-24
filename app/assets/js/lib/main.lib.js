@@ -3,7 +3,7 @@ var getServer = function() {
 
 	var host = location.host;
 
-	if(host.indexOf('dashboard') > -1) {
+	if(host.indexOf('dashboard') > -1 || host.indexOf('app') > -1) {
 		resolved = 'http://server.expo.mmmmmmm.nl';
 	}
 
