@@ -1,4 +1,21 @@
-var socket = io.connect('http://' + (location.host || 'localhost').split(':')[0] + ':1337');
+var getServer = function() {
+	var resolved = null;
+
+	var host = location.host;
+
+	if(host.indexOf('dashboard') > -1) {
+		resolved = 'http://server.expo.mmmmmmm.nl';
+	}
+
+	if(host.indexOf('localhost') > -1) {
+		resolved = 'http://' + (location.host || 'localhost').split(':')[0] + ':1337';
+	}
+
+
+	return resolved;
+};
+
+var socket = io.connect(getServer());
 var controll		= false;
 var project			= false;
 
