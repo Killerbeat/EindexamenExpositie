@@ -2,19 +2,19 @@ $(function(){
 
 	socket.on('project_active', function (data) {
 
-		console.log(data.project);
+		console.log(data);
 
-		if(data.project.active == true){
+		if(data.active == true){
 
 			$(".touchpad").css("border","3px solid #FF009A");
 			project = true;
 
-			$(".contentText span").attr("data-id", data.project.id).show();
+			$(".contentText span").attr("data-id", data.id).show();
 			$(".contentText p").hide();
 
-			$("#project h1").html(data.project.title);
-			$("#project h3").html(data.project.name);
-			$("#project .details").html(data.project.text);
+			$("#project h1").html(data.title);
+			$("#project h3").html(data.name);
+			$("#project .details").html(data.description.long);
 
 		}else{
 

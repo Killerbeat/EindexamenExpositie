@@ -44,22 +44,27 @@ function createProject(project_id){
 	console.log("id:", project_id)
 
 	$.each(all_projects, function(key, item){
+		console.debug(key, item);
 		if(project_id == item.id){
-
-			$("#project_display p").html(item.description);
+			$("#project_display p").html(item.description.short);
 			$("#project_display h2").html(item.name);
-			$("#project_display h5").html(item.user.full_name);
-			$("#project_display span").html(item.user.class);
+			// $("#project_display span").html(item.user.class);
 			$("#project_display aside a").html("");
 
 			if(item.url !== ""){
 				$("#project_display aside a").attr("href", item.url).html(item.url);
 			}
 
-			$("#project_image img").attr("src", "http://jaarboek2014.hosts.ma-cloud.nl/uploads/"+ item.value);
-			$("#project_display aside img").attr("src", item.user.avatar);
+			$('#project_display aside').empty();
 
-			$("#project_background").css("background-image", "url(http://jaarboek2014.hosts.ma-cloud.nl/uploads/"+ encodeURIComponent(item.value) +")");
+			$.each(item.team, function(key, item) {
+				$('#project_display aside').append('<h5>' + item + '</h5>');
+			});
+
+
+			$("#project_image img").attr("src", item.media.screenshot);
+
+			$("#project_background").css("background-image", "url(" + item.media.screenshot + ")");
 
 			$("#project").removeClass("hide").addClass("active");
 

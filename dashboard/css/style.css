@@ -130,7 +130,7 @@ body {
 
 #landing #app,
 #landing #intro {
-	float: left;	
+	float: left;
 }
 
 #landing #info_box {
@@ -212,7 +212,7 @@ body {
 	border-radius: 10px;
 	background-color: #FFF;
 	margin-top: 15px;
-} 
+}
 
 #landing #auth_code {
 	margin-left: 15px;
@@ -282,6 +282,9 @@ body {
 	margin-right: 5%;
 	margin-bottom: 5%;
 	background-color: white;
+
+	background-size: 100%;
+	background-repeat: no-repeat;
 }
 
 .project:nth-of-type(3n+0){
@@ -521,10 +524,10 @@ body {
 
 #project_display aside h5 {
 	background-color: #333;
-	padding: 15px;
+	padding: 7px;
 	color: white;
 	margin-right: 25px;
-	margin-top: 25px;
+	margin-top: 6px;
 }
 
 #close_project {
@@ -544,5 +547,5 @@ body {
 
 #close_project.active img {
 	background-color: white;
-	border-radius: 17px;	
+	border-radius: 17px;
 }

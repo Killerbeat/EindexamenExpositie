@@ -54,7 +54,7 @@ function check_overlay(pointer) {
             case "project":
                 var itemId = $(item).data('id');
 
-                if(lastItem == itemId) return;
+                // if(lastItem == itemId) return;
 
                 $(item).css("opacity", "1")
                 $(".cursor").attr("data-project",  $(item).attr("data-id"));

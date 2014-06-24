@@ -46,19 +46,8 @@ function displayInApp(project_id){
 
 	$.each(all_projects, function(key, item){
 		if(project_id == item.id){
-
-		    socket.emit('project_active', {
-		        project: {
-		            id: project_id,
-		            title: item.name,
-		            text: item.description,
-		            url: item.url,
-		            name: item.user.full_name,
-		            avatar: item.user.avatar,
-		            school_class: item.user.class,
-		            active: true
-		        }
-		    });
+			console.log(item);
+		    socket.emit('project_active', item);
 
 		}
 	});

@@ -91,11 +91,11 @@ io.sockets.on('connection', function (socket) {
   });
 
   socket.on('project_active', function (data) {
-    if(!projectActive) return false;
+    if(!throttle.projectActive) return false;
 
-    io.sockets.socket(connect_to_controller[socket_id]).emit('project_active', { project: data.project});
+    io.sockets.socket(connect_to_controller[socket_id]).emit('project_active', data);
 
-    projectActive = false;
+    throttle.projectActive = false;
 
   });
 
