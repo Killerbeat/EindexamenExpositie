@@ -236,7 +236,7 @@ body {
 	border-radius: 100%;
 }
 
-#landing #auth_code_small {
+#info_box span {
 	background-color: #3B3B3B;
 	border-radius: 5px;
 	color: #FFF;
@@ -246,6 +246,7 @@ body {
 	font-size: 13px;
 	margin-left: 5px;
 	margin-right: 5px;
+	font-weight: bold;
 }
 
 /*Dashboard*/
