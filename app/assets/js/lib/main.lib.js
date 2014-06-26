@@ -5,12 +5,9 @@ var getServer = function() {
 
 	if(host.indexOf('dashboard') > -1 || host.indexOf('ma-expo.nl') > -1) {
 		resolved = 'http://server.expo.mmmmmmm.nl';
-	}
-
-	if(host.indexOf('localhost') > -1) {
+	} else {
 		resolved = 'http://' + (location.host || 'localhost').split(':')[0] + ':1337';
 	}
-
 
 	return resolved;
 };
