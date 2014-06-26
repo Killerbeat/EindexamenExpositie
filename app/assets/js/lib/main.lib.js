@@ -76,9 +76,16 @@ $(function(){
 	});
 
   	$(window).blur(function(){
-  		location.reload();
+  		console.log('on blur');
+		location.reload();
   	});
 
+  	document.addEventListener('visibilitychange', function(){
+  		if(document.hidden) {
+  			location.reload();
+  			console.log('on visibilitychange');
+  		}
+  	}, false);
 });
 
 function displayOnDashboard(id){
