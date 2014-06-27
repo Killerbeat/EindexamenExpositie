@@ -56,7 +56,10 @@ $(function(){
 
 });
 
+var lastProject = null;
+
 function displayInApp(project_id){
+	if(lastProject == project_id) return false;
 
 	$.each(all_projects, function(key, item){
 		if(project_id == item.id){
@@ -65,5 +68,7 @@ function displayInApp(project_id){
 
 		}
 	});
+
+	lastProject = project_id;
 
 }

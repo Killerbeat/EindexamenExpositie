@@ -52,15 +52,9 @@ function check_overlay(pointer) {
 
             //If a project is hovered do stuff
             case "project":
-                var itemId = $(item).data('id');
-
-                // if(lastItem == itemId) return;
-
                 $(item).css("opacity", "1")
                 $(".cursor").attr("data-project",  $(item).attr("data-id"));
                 displayInApp(parseInt($(item).attr("data-id")));
-
-                lastItem = $(item).data('id');
 
             break;
 
