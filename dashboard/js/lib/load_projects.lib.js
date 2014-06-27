@@ -6,7 +6,7 @@ var loadProjects = function(){
         all_projects = data;
 		$.each(data, function(key, item) {
 
-			projects.push("<article class='project' data-id='"+ item.id +"' style='background-image: url("+ item.media.thumbnail +");'><div class='project_header'><h2>"+ item.name +"</h2></div><img src='http://jaarboek2014.hosts.ma-cloud.nl/uploads/"+ item.value +"' style='display:none;'></article>");		});
+			projects.push("<article class='project' data-id='"+ item.id +"' style='background-image: url("+ item.media.thumbnail +");'><div class='project_header'><h2>"+ item.name +"</h2></div></article>");		});
 
 		$("#project_container").append(projects);
 	});
